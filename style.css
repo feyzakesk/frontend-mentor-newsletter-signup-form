@@ -1,0 +1,128 @@
+:root{
+  --Red: hsl(4, 100%, 67%);
+  --Blue-800: hsl(234, 29%, 20%);
+  --Blue-700: hsl(235, 18%, 26%);
+  --Grey: hsl(0, 0%,58%);
+  --White: hsl(0, 0%, 100%);
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: var(--Blue-700);
+}
+
+main{
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  width: 900px;
+  background-color: var(--White);
+  display: flex;
+  border-radius: 25px;
+  padding: 20px;
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+  gap: 40px;
+
+}
+.content h1{
+  font-weight: 700;
+  font-size: 40px;
+  color: var(--Blue-800);
+}
+.content p{
+  font-weight: 400;
+  color: var(--Blue-800);
+  line-height: 1.6;
+}
+.content ul li{
+  line-height: 1.9;
+  list-style-type: none;
+  display: flex;
+  gap: 15px;
+  font-weight: 400;
+}
+
+.email-content{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+.email-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.email-label{
+  color: var(--Blue-700);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.error-message{
+  display: none;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--Red);
+}
+.email-text{
+  padding: 15px;
+  margin-top: 10px;
+}
+
+.email-text.error{
+  background-color: hsl(4, 100%, 95%);
+  border: 1px solid var(--Red);
+  color: var(--Red);
+}
+.button-submit{
+  margin-top: 20px;
+  background-color: var(--Blue-800);
+  color: var(--White);
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 400;
+  cursor: pointer;
+  transition: 0.9s ease;
+}
+
+.button-submit:hover{
+  background-color: var(--Red);
+  box-shadow: 0 10px 20px -5px var(--Red);
+}
+
+@media (max-width: 768px) {
+
+  .container{
+    width: 100%;
+    padding: 0;
+    flex-direction: column;
+    border-radius: 0;
+  }
+  picture{
+    order: -1;
+    width: 100%;
+  }
+  picture img {
+    width: 100%;
+    display: block;
+  }
+
+}
+
